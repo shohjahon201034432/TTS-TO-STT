@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech - TTS</title>
+    <link rel="stylesheet" href="tts.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Speech (TTS)</h1>
+        <textarea id="text-input" placeholder="Matnni kiriting..."></textarea>
+        
+        <div class="controls">
+            <select id="voice-select"></select>
+            <select id="rate-select">
+                <option value="0.5">Ajoyib past tezlik</option>
+                <option value="1" selected>O'rtacha tezlik</option>
+                <option value="1.5">Tez tezlik</option>
+            </select>
+            <select id="pitch-select">
+                <option value="0.5">Past ton</option>
+                <option value="1" selected>O'rtacha ton</option>
+                <option value="2">Yuqaridan ton</option>
+            </select>
+            <button id="speak-btn">Ovoz chiqarish</button>
+        </div>
+
+        <p id="status"></p>
+    </div>
+
+    <script src="tts.js"></script>
+</body>
+</html>

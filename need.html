@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eng Kerakli Ovozli Habarlar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2c3e50;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #f39c12;
+            font-size: 2.5em;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .card {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: #e67e22;
+        }
+
+        audio {
+            display: none;
+        }
+
+        .card p {
+            font-size: 1.2em;
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Eng Kerakli 3 ta Ovozli Habarlar</h1>
+    
+    <div class="container">
+        <div class="card">
+            <p>TELEFONGA GAPIRING!</p>
+            <button onclick="playAudio('audio/salomalashish.mp3')">BOSING</button>
+            <audio id="audio/salomalashish.mp3">
+                <source src="Mp3 Editor_241201014226.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="card">
+            <p>BEKAT NOMI NIMA?</p>
+            <button onclick="playAudio('audio/qutlash.mp3')">BOSING</button>
+            <audio id="audio/qutlash.mp3">
+                <source src="Mp3 Editor_241201014529.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <!-- Qo'shimcha ovozli habarlar -->
+        <div class="card">
+            <p>KIM OXIRGISI?</p>
+            <button onclick="playAudio('audio/shodlik.mp3')">BOSING</button>
+            <audio id="audio/shodlik.mp3">
+                <source src="Mp3 Editor_241201014318.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <!-- Ko'proq ovozli habarlarni shu tarzda qo'shishingiz mumkin -->
+        
+    </div>
+
+    <script>
+        function playAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
